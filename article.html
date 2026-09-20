@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PRINCE2 article" />
+  <link rel="canonical" href="https://example.com/article.html" />
+  <title>PRINCE2 Article — PRINCE2 Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="article-page-body">
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="reading-progress"><span id="progress-bar"></span></div>
+  <header class="site-header glass glass-1"><a class="brand" href="index.html"><span class="brand-mark">P2</span><span>PRINCE2 <em>Guide</em></span></a><nav class="desktop-nav" aria-label="Primary"><a href="index.html">Home</a><a href="blog.html">Articles</a><a href="about.html">About</a></nav><div class="header-actions"><button class="icon-btn" data-search-open aria-label="Search articles">⌕</button><button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">◐</button><button class="icon-btn mobile-menu-btn" data-menu-open aria-label="Open menu">☰</button></div></header>
+  <main id="article-container" class="article-shell container"></main>
+
+  <footer class="site-footer glass glass-1"><div><div class="brand footer-brand"><span class="brand-mark">P2</span><span>PRINCE2 <em>Guide</em></span></div><p>Independent educational resources for PRINCE2 learners.</p></div><div class="footer-links"><a href="index.html">Home</a><a href="blog.html">Articles</a><a href="about.html">About</a><a href="#" onclick="return false">Privacy</a></div><div class="footer-note">© 2026 PRINCE2 Guide</div></footer>
+  <div class="search-overlay" data-search-overlay aria-hidden="true"><div class="search-backdrop" data-search-close></div><div class="search-panel glass glass-3"><div class="search-top"><span class="search-kicker">SEARCH</span><button class="icon-btn" data-search-close>✕</button></div><div class="search-input-wrap"><span>⌕</span><input id="global-search" type="search" placeholder="Search PRINCE2 articles..." /></div><div id="global-search-results" class="search-results"></div></div></div>
+  <div class="mobile-menu-overlay" data-mobile-overlay aria-hidden="true"><div class="search-backdrop" data-menu-close></div><div class="mobile-menu glass glass-3"><div class="search-top"><span class="search-kicker">MENU</span><button class="icon-btn" data-menu-close>✕</button></div><a href="index.html">Home</a><a href="blog.html">Articles</a><a href="about.html">About</a></div></div>
+  <script src="js/articles.js"></script><script src="js/main.js"></script>
+  <script>
+    const id = new URLSearchParams(location.search).get('id') || 'what-is-prince2';
+    const article = ARTICLES.find(a=>a.id===id) || ARTICLES[0];
+    document.title = `${article.title} — PRINCE2 Guide`;
+    document.querySelector('meta[name="description"]').content = article.excerpt;
+    const container=document.querySelector('#article-container');
+    container.innerHTML=`<div class="article-layout"><aside class="toc glass glass-1"><div class="toc-title">CONTENTS</div><div id="toc-links"></div></aside><article class="article-content"><div class="article-head"><p class="eyebrow">${article.category}</p><h1>${article.title}</h1><p class="article-dek">${article.excerpt}</p><div class="meta article-meta"><span>By ${article.author}</span><span>·</span><span>${article.date}</span><span>·</span><span>${article.readTime} min read</span></div></div><div class="hero-art glass glass-1" aria-hidden="true"><div class="hero-art-label">PRINCE2</div><div class="hero-art-sub">PROJECT MANAGEMENT • LEARNING • PRACTICE</div><div class="hero-art-grid"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="article-body" id="article-body">${article.body}</div><div class="author-box glass glass-1"><div class="avatar">${article.author.split(' ').map(x=>x[0]).join('').slice(0,2)}</div><div><div class="eyebrow">WRITTEN BY</div><h3>${article.author}</h3><p>Project management writer focused on making PRINCE2 easier to understand.</p></div></div><section class="related"><div class="section-heading"><div><p class="eyebrow">KEEP READING</p><h2>Continue reading</h2></div></div><div class="popular-grid">${ARTICLES.filter(a=>a.id!==article.id).slice(0,3).map(popularCard).join('')}</div></section></article></div>`;
+
+    const toc = document.querySelector('#toc-links'); const h2s=[...document.querySelectorAll('#article-body h2')]; h2s.forEach((h,i)=>{h.id=`section-${i+1}`; toc.insertAdjacentHTML('beforeend',`<a href="#${h.id}">${String(i+1).padStart(2,'0')} ${h.textContent}</a>`)});
+    const progress=document.querySelector('#progress-bar');
+    const updateProgress=()=>{const doc=document.documentElement; const max=doc.scrollHeight-innerHeight; progress.style.width=(max>0?(scrollY/max)*100:0)+'%';}; addEventListener('scroll',updateProgress,{passive:true}); updateProgress();
+    const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('#toc-links a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-35% 0px -55% 0px'}); h2s.forEach(h=>obs.observe(h));
+    const rt=document.querySelector('.article-meta');
+  </script>
+</body>
+</html>
