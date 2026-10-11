@@ -1,137 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Independent PRINCE2 learning resources, guides and explanations." />
-  <meta property="og:title" content="PRINCE2 Guide — PRINCE2, explained clearly." />
-  <meta property="og:description" content="Independent PRINCE2 learning resources, guides and explanations." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com/" />
-  <link rel="canonical" href="https://example.com/" />
-  <title>PRINCE2 Guide — PRINCE2, explained clearly.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical PRINCE2 learning blog with guided articles, key terms, and project management notes.">
+  <title>Project Method Notes | PRINCE2 Learning Blog</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
-  <header class="site-header glass glass-1">
-    <a class="brand" href="index.html"><span class="brand-mark">P2</span><span>PRINCE2 <em>Guide</em></span></a>
-    <nav class="desktop-nav" aria-label="Primary"><a href="index.html" class="active">Home</a><a href="blog.html">Articles</a><a href="about.html">About</a></nav>
-    <div class="header-actions"><button class="icon-btn" data-search-open aria-label="Search articles">⌕</button><button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">◐</button><button class="icon-btn mobile-menu-btn" data-menu-open aria-label="Open menu">☰</button></div>
+  <header class="topbar">
+    <button class="mobile-menu" type="button" aria-label="Open learning menu" aria-expanded="false">☰</button>
+    <a class="brand" href="index.html" aria-label="Project Method Notes home">
+      <span class="brand-mark">P2</span>
+      <span class="brand-copy">Project Method<small>NOTES</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="index.html">Learn</a>
+      <a href="blog/prince2-introduction.html">Guides</a>
+      <a href="blog/prince2-7-overview.html">PRINCE2 7</a>
+      <a href="blog/prince2-project-management.html">Practice</a>
+      <a href="blog/prince2-key-terms.html">Glossary</a>
+    </nav>
+    <input class="header-search" type="search" aria-label="Search articles" placeholder="Search the notes…">
+    <a class="header-link" href="blog/sitemaps.html">Index</a>
+    <button class="sign-in" type="button" onclick="alert('This demo keeps sign-in local; connect your auth provider here.')">Sign in</button>
   </header>
 
-  <main>
-    <section class="hero container"><p class="eyebrow">THE PRINCE2 KNOWLEDGE HUB</p><h1>PRINCE2, <span>explained clearly.</span></h1><p class="hero-copy">Practical guides, explanations and study resources for professionals learning PRINCE2.</p></section>
+  <nav class="topicbar" aria-label="Frameworks"><a class="active" href="index.html">PRINCE2</a><a href="prince2-agile.html">PRINCE2 AGILE</a><a href="itil.html">ITIL</a><a href="agilepm.html">AGILEPM</a></nav>
 
-    <section class="container">
-      <a class="featured glass glass-2" href="articles/what-is-prince2.html">
-        <div class="featured-copy"><span class="tag">PRINCE2 FUNDAMENTALS</span><h2>What Is PRINCE2?</h2><p>A clear introduction to the PRINCE2 project management method, its structure, terminology and how the qualification pathway fits together.</p><div class="meta"><span>8 min read</span><span>·</span><span>Updated Sep 2026</span><span class="arrow">↗</span></div></div>
-        <div class="featured-visual" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="diagram-card glass glass-1"><span>PRINCE2</span><div class="diagram-line"></div><div class="diagram-line short"></div><div class="diagram-line"></div></div><div class="diagram-node node-a">Principles</div><div class="diagram-node node-b">Practices</div><div class="diagram-node node-c">Processes</div></div>
-      </a>
-    </section>
+  <div class="site-shell">
+    <div id="sidebar-mount"></div>
 
-    <section class="container section-block"><div class="section-heading"><div><p class="eyebrow">THE LIBRARY</p><h2>Latest PRINCE2 articles</h2></div><a href="blog.html" class="text-link">View all ↗</a></div><div id="latest-list" class="article-list">
-      <a class="article-row" href="articles/what-is-prince2.html" data-category="Project Management|Principles|Practices|Processes" data-search="What Is PRINCE2? A Complete Beginner’s Guide A clear introduction to the PRINCE2 project management method, its structure, terminology and the way the qualification pathway fits together. PRINCE2 Fundamentals Project Management Principles Practices Processes what is prince2 beginner guide method project management" >
-  <div class="article-row-copy">
-    <span class="tag">PRINCE2 Fundamentals</span>
-    <h3>What Is PRINCE2? A Complete Beginner’s Guide</h3>
-    <p>A clear introduction to the PRINCE2 project management method, its structure, terminology and the way the qualification pathway fits together.</p>
-    <div class="meta"><span>Alex Morgan</span><span>·</span><span>September 2026</span><span>·</span><span>8 min read</span></div>
-  </div>
-  <div class="row-art" aria-hidden="true"><span>PR</span></div>
-</a>
-<a class="article-row" href="articles/foundation-explained.html" data-category="Foundation" data-search="PRINCE2 Foundation Explained An easy-to-follow introduction to what the Foundation level is intended to help you understand and how to approach your study. Foundation Foundation foundation qualification study exam beginner" >
-  <div class="article-row-copy">
-    <span class="tag">Foundation</span>
-    <h3>PRINCE2 Foundation Explained</h3>
-    <p>An easy-to-follow introduction to what the Foundation level is intended to help you understand and how to approach your study.</p>
-    <div class="meta"><span>Alex Morgan</span><span>·</span><span>September 2026</span><span>·</span><span>6 min read</span></div>
-  </div>
-  <div class="row-art" aria-hidden="true"><span>FO</span></div>
-</a>
-<a class="article-row" href="articles/practitioner-explained.html" data-category="Practitioner" data-search="PRINCE2 Practitioner Explained What changes when you move from learning PRINCE2 concepts to applying them in realistic project situations. Practitioner Practitioner practitioner application scenarios exam" >
-  <div class="article-row-copy">
-    <span class="tag">Practitioner</span>
-    <h3>PRINCE2 Practitioner Explained</h3>
-    <p>What changes when you move from learning PRINCE2 concepts to applying them in realistic project situations.</p>
-    <div class="meta"><span>Alex Morgan</span><span>·</span><span>September 2026</span><span>·</span><span>7 min read</span></div>
-  </div>
-  <div class="row-art" aria-hidden="true"><span>PR</span></div>
-</a>
-<a class="article-row" href="articles/principles-explained.html" data-category="Principles" data-search="PRINCE2 Principles Explained A practical guide to the principles and the role they play in keeping PRINCE2 consistent across different project environments. Principles Principles principles tailoring continued business justification learn from experience roles responsibilities manage by exception" >
-  <div class="article-row-copy">
-    <span class="tag">Principles</span>
-    <h3>PRINCE2 Principles Explained</h3>
-    <p>A practical guide to the principles and the role they play in keeping PRINCE2 consistent across different project environments.</p>
-    <div class="meta"><span>Alex Morgan</span><span>·</span><span>September 2026</span><span>·</span><span>9 min read</span></div>
-  </div>
-  <div class="row-art" aria-hidden="true"><span>PR</span></div>
-</a>
-<a class="article-row" href="articles/practices-explained.html" data-category="Practices" data-search="PRINCE2 Practices Explained A readable guide to the management areas covered by PRINCE2 practices and how they connect to day-to-day project control. Practices Practices practices business case organizing plans risk issues progress quality" >
-  <div class="article-row-copy">
-    <span class="tag">Practices</span>
-    <h3>PRINCE2 Practices Explained</h3>
-    <p>A readable guide to the management areas covered by PRINCE2 practices and how they connect to day-to-day project control.</p>
-    <div class="meta"><span>Alex Morgan</span><span>·</span><span>September 2026</span><span>·</span><span>10 min read</span></div>
-  </div>
-  <div class="row-art" aria-hidden="true"><span>PR</span></div>
-</a>
-<a class="article-row" href="articles/processes-explained.html" data-category="Processes" data-search="PRINCE2 Processes Explained Understand the flow of PRINCE2 processes and how each process supports decision-making through the life of a project. Processes Processes processes starting up directing initiating stages managing product delivery closing" >
-  <div class="article-row-copy">
-    <span class="tag">Processes</span>
-    <h3>PRINCE2 Processes Explained</h3>
-    <p>Understand the flow of PRINCE2 processes and how each process supports decision-making through the life of a project.</p>
-    <div class="meta"><span>Alex Morgan</span><span>·</span><span>September 2026</span><span>·</span><span>9 min read</span></div>
-  </div>
-  <div class="row-art" aria-hidden="true"><span>PR</span></div>
-</a>
-    </div></section>
+    <main class="main-content">
+      <div class="breadcrumbs">Home / Learning path</div>
+      <section class="hero">
+        <span class="kicker">Project management, explained</span>
+        <h1>PRINCE2 notes for people who want the method to make sense.</h1>
+        <p class="lead">A clean, practical reading space for understanding PRINCE2 concepts, project roles, management products, and the logic behind the method.</p>
+        <div class="hero-row">
+          <span class="tag">PRINCE2 7</span>
+          <span class="tag">Study-friendly</span>
+          <span class="meta">Start with the introduction, then move through the topic cards.</span>
+        </div>
+      </section>
 
-    <section class="container section-block"><div class="section-heading"><div><p class="eyebrow">EXPLORE</p><h2>Find your topic</h2></div></div><div id="topic-explorer" class="topic-pills">
-      <a class="topic-pill glass glass-1" href="blog.html?category=Project%20Management">Project Management</a>
-<a class="topic-pill glass glass-1" href="blog.html?category=Principles">Principles</a>
-<a class="topic-pill glass glass-1" href="blog.html?category=Practices">Practices</a>
-<a class="topic-pill glass glass-1" href="blog.html?category=Processes">Processes</a>
-<a class="topic-pill glass glass-1" href="blog.html?category=Foundation">Foundation</a>
-<a class="topic-pill glass glass-1" href="blog.html?category=Practitioner">Practitioner</a>
-<a class="topic-pill glass glass-1" href="blog.html?category=Exam%20Preparation">Exam Preparation</a>
-<a class="topic-pill glass glass-1" href="blog.html?category=Agile">Agile</a>
-    </div></section>
+      <section aria-labelledby="path-title">
+        <h2 id="path-title" style="margin:0; font-size:28px;">Choose your starting point</h2>
+        <div class="home-grid">
+          <a class="home-card" href="blog/prince2-introduction.html">
+            <div class="icon">01</div>
+            <h2>Start with the method</h2>
+            <p>Understand why PRINCE2 is structured around principles, people, practices, and processes.</p>
+            <span class="arrow">Read introduction →</span>
+          </a>
+          <a class="home-card" href="blog/what-is-prince2.html">
+            <div class="icon">02</div>
+            <h2>What does PRINCE2 actually do?</h2>
+            <p>Build a mental model of governance, decision points, controls, and tailoring.</p>
+            <span class="arrow">Explore the concept →</span>
+          </a>
+          <a class="home-card" href="blog/prince2-7-overview.html">
+            <div class="icon">03</div>
+            <h2>See the PRINCE2 7 shape</h2>
+            <p>Map the method into principles, people, practices, processes, and management products.</p>
+            <span class="arrow">Open overview →</span>
+          </a>
+          <a class="home-card" href="blog/prince2-project-management.html">
+            <div class="icon">04</div>
+            <h2>Use it on a real project</h2>
+            <p>Translate the method into practical routines for starting, directing, managing, and closing work.</p>
+            <span class="arrow">Read project guidance →</span>
+          </a>
+          <a class="home-card" href="blog/prince2-key-terms.html">
+            <div class="icon">05</div>
+            <h2>Decode the vocabulary</h2>
+            <p>Keep the most useful PRINCE2 terms close at hand while you study or work through an example.</p>
+            <span class="arrow">Open key terms →</span>
+          </a>
+          <a class="home-card" href="blog/sitemaps.html">
+            <div class="icon">06</div>
+            <h2>Browse the whole site</h2>
+            <p>A compact map of the pages makes it easy to jump between concepts without losing your place.</p>
+            <span class="arrow">View site maps →</span>
+          </a>
+        </div>
+      </section>
 
-    <section class="container section-block popular-block"><div class="section-heading"><div><p class="eyebrow">START HERE</p><h2>Popular guides</h2></div></div><div id="popular-grid" class="popular-grid">
-      <a class="popular-card glass glass-1" href="articles/foundation-explained.html" data-category="Foundation" data-search="PRINCE2 Foundation Explained An easy-to-follow introduction to what the Foundation level is intended to help you understand and how to approach your study. Foundation Foundation foundation qualification study exam beginner">
-  <span class="tag">Foundation</span>
-  <h3>PRINCE2 Foundation Explained</h3>
-  <p>An easy-to-follow introduction to what the Foundation level is intended to help you understand and how to approach your study.</p>
-  <span class="card-arrow">↗</span>
-</a>
-<a class="popular-card glass glass-1" href="articles/practitioner-explained.html" data-category="Practitioner" data-search="PRINCE2 Practitioner Explained What changes when you move from learning PRINCE2 concepts to applying them in realistic project situations. Practitioner Practitioner practitioner application scenarios exam">
-  <span class="tag">Practitioner</span>
-  <h3>PRINCE2 Practitioner Explained</h3>
-  <p>What changes when you move from learning PRINCE2 concepts to applying them in realistic project situations.</p>
-  <span class="card-arrow">↗</span>
-</a>
-<a class="popular-card glass glass-1" href="articles/principles-explained.html" data-category="Principles" data-search="PRINCE2 Principles Explained A practical guide to the principles and the role they play in keeping PRINCE2 consistent across different project environments. Principles Principles principles tailoring continued business justification learn from experience roles responsibilities manage by exception">
-  <span class="tag">Principles</span>
-  <h3>PRINCE2 Principles Explained</h3>
-  <p>A practical guide to the principles and the role they play in keeping PRINCE2 consistent across different project environments.</p>
-  <span class="card-arrow">↗</span>
-</a>
-<a class="popular-card glass glass-1" href="articles/practices-explained.html" data-category="Practices" data-search="PRINCE2 Practices Explained A readable guide to the management areas covered by PRINCE2 practices and how they connect to day-to-day project control. Practices Practices practices business case organizing plans risk issues progress quality">
-  <span class="tag">Practices</span>
-  <h3>PRINCE2 Practices Explained</h3>
-  <p>A readable guide to the management areas covered by PRINCE2 practices and how they connect to day-to-day project control.</p>
-  <span class="card-arrow">↗</span>
-</a>
-    </div></section>
-  </main>
+      <section class="callout" style="margin-top:28px;">
+        <strong>How to use this site</strong>
+        Read one page at a time. After each page, write one sentence explaining the idea without looking back at the text. That turns passive reading into retrieval practice.
+      </section>
+    </main>
 
-  <footer class="site-footer glass glass-1"><div><div class="brand footer-brand"><span class="brand-mark">P2</span><span>PRINCE2 <em>Guide</em></span></div><p>Independent educational resources for PRINCE2 learners.</p></div><div class="footer-links"><a href="index.html">Home</a><a href="blog.html">Articles</a><a href="about.html">About</a><a href="#" onclick="return false">Privacy</a></div><div class="footer-note">© 2026 PRINCE2 Guide</div></footer>
-  <div class="search-overlay" data-search-overlay aria-hidden="true"><div class="search-backdrop" data-search-close></div><div class="search-panel glass glass-3"><div class="search-top"><span class="search-kicker">SEARCH</span><button class="icon-btn" data-search-close aria-label="Close search">✕</button></div><div class="search-input-wrap"><span>⌕</span><input id="global-search" type="search" placeholder="Search PRINCE2 articles..." autocomplete="off" /></div><div id="global-search-results" class="search-results"><p class="muted">Search titles, topics and keywords.</p></div></div></div>
-  <div class="mobile-menu-overlay" data-mobile-overlay aria-hidden="true"><div class="search-backdrop" data-menu-close></div><div class="mobile-menu glass glass-3"><div class="search-top"><span class="search-kicker">MENU</span><button class="icon-btn" data-menu-close aria-label="Close menu">✕</button></div><a href="index.html">Home</a><a href="blog.html">Articles</a><a href="about.html">About</a></div></div>
+    <aside class="right-rail" aria-label="Quick facts">
+      <div class="rail-card">
+        <div class="rail-top">
+          <span class="mini-mark">P2</span>
+          <h3>A calmer way to learn project management</h3>
+        </div>
+        <div class="rail-body">
+          <p>Short explanations, compact diagrams in words, and a left-hand learning path that stays with you.</p>
+          <a class="rail-button" href="blog/prince2-introduction.html">Begin the guide</a>
+        </div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-body">
+          <strong style="display:block; margin-bottom:8px; color:#111827;">Quick facts</strong>
+          <div class="fact-row"><span>Focus</span><span>Governed delivery</span></div>
+          <div class="fact-row"><span>Format</span><span>Guided reading</span></div>
+          <div class="fact-row"><span>Version</span><span>PRINCE2 7</span></div>
+          <div class="fact-row"><span>Audience</span><span>Students & teams</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <div>Project Method Notes · Educational demo · <span data-year></span></div>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 </html>

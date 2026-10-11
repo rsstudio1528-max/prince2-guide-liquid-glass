@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://example.com/prince2-blog-with-left-menu/sitemap.xml
